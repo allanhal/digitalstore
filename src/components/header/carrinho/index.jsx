@@ -4,8 +4,10 @@ export default function Carrinho() {
     const [exibir, setExibir] = useState(true)
     let ComponentCarrinhoHover = () => (<>
         <div style={{
-            display: exibir ? 'flex': 'none',
-            flexDirection: 'column'
+            backgroundColor:'red',
+            display: exibir ? 'flex' : 'none',
+            flexDirection: 'column',
+            position: 'absolute'
         }}>
             <span>Meu Carrinho</span>
             <span>Produto 1</span>
@@ -15,8 +17,10 @@ export default function Carrinho() {
         </div></>)
     return (
         <>
-            <span onMouseEnter={()=> setExibir(true)} onMouseLeave={()=> setExibir(false)}>Carrinho</span>
+            <span onClick={() => setExibir(!exibir)}>Carrinho</span>
             <ComponentCarrinhoHover />
+            <br />
+            <span>Cadastre-se</span>
         </>
     )
 }
