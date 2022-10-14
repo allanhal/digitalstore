@@ -1,4 +1,4 @@
-import Carrinho from './carrinho'
+import Carrinho from './carrinho/index.jsx'
 
 export default function Header() {
     return (<>
